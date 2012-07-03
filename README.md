@@ -1,0 +1,1 @@
+sass --watch input-dir:output-dir
