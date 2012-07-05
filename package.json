@@ -9,6 +9,7 @@
     "express": "3.0.0beta5",
     "jade": "*",
     "coffee-script": "*",
-    "the_time.js": "*"
+    "the_time.js": "*",
+    "uglify-js": "*"
   }
 }
