@@ -2,18 +2,20 @@ fs      = require 'fs'
 {print} = require 'util'
 {spawn} = require 'child_process'
 
-sass_path     = 'scss'
-coffee_path   = './node_modules/coffee-script/bin/coffee'
-
-task 'watcher', 'Compile CoffeeScript source files', ->
-  # COFFEE
+task 'dev', 'Dev Env : Compile CoffeeScript/SCSS source files', ->
+  # APP
   app_path = __dirname
-  src_path = "#{__dirname}/app_src"
-  # SCSS
-  scss_src_path = './public/stylesheets/scss'
-  css_path      = './public/stylesheets/scss'
 
-  coffee_watcher = spawn coffee_path, ['-cbw', '-o', app_path, "#{__dirname}/app_src"]
+  # COFFEE
+  coffee_path   = './node_modules/coffee-script/bin/coffee'
+  coffee_src_path = "#{__dirname}/src"
+  
+  # SCSS
+  sass_path     = 'scss'
+  scss_src_path = app_path + '/public/stylesheets/scss'
+  css_path      = app_path + '/public/stylesheets/'
+
+  coffee_watcher = spawn coffee_path, ['-cbw', '-o', app_path, coffee_src_path]
   coffee_watcher.stdout.on 'data', (data) -> print data.toString()
   coffee_watcher.stderr.on 'data', (data) -> print data.toString()
   coffee_watcher.on 'exit', (status) -> callback?() if status is 0
