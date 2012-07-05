@@ -1,22 +1,29 @@
-sass --watch input-dir:output-dir
+### Node.js + Express 3 + SASS + CoffeeScript
 
-fs = require 'fs'
+- complile coffee
+- complile scss
+- uglify
 
-{print} = require 'sys'
-{exec} = require 'child_process'
-{spawn} = require 'child_process'
+**ruby**
 
-option '-o', '--output [DIR]', 'output dir'
+- ruby
+- gem
+- gem install guard
+- gem install scss
 
-task 'minify', 'Minify mongo production scripts', ->
-  exec 'uglifyjs --overwrite lib/mongo/lib/*.js', (err, stdout, stderr) ->
-    throw err if err
-    console.log stdout + stderr
+**node**
 
-task 'watch', 'Watch lib/mongo/src for changes', ->
-  coffee = spawn 'coffee', ['-w', '-c', '-o', 'lib/mongo/lib', 'lib/mongo/src']
-  coffee.stderr.on 'data', (data) ->
-    process.stderr.write data.toString()
-  coffee.stdout.on 'data', (data) ->
-    print data.toString()
-    invoke 'minify'
+- node
+- npm
+
+**install**
+
+- git clone
+- cd ExpressOnSteroids
+- npm install
+- ./node_modules/coffee-script/bin/cake dev
+- node app.js
+
+**TODO**
+
+- hamljs

@@ -11,7 +11,7 @@ scss_path    = "#{app_path}/public/stylesheets/scss"
 coffee_path  = "#{app_path}/public/javascripts/coffee"
 app_src_path = "#{__dirname}/src"
 
-# COMPILLERS
+# COMPILERS
 sass_exec    = 'scss'
 coffee_exec  = app_path + '/node_modules/coffee-script/bin/coffee'
 ugly_exec    = app_path + '/node_modules/uglify-js/bin/uglifyjs'
