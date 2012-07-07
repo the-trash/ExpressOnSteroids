@@ -1,12 +1,17 @@
 express = require 'express'
 routes  = require './routes'
+#haml    = require 'hamljs'
 http    = require 'http'
 app     = express()
+
 
 app.configure ->
   app.set 'port', process.env.PORT || 3000
   app.set 'views', __dirname + '/views'
-  app.set 'view engine', 'jade'
+  #app.set 'view engine', 'jade'
+  app.set 'view engine', 'haml'
+  app.engine '.haml', require('hamljs').render()
+
   app.use express.favicon()
   app.use express.logger 'dev'
   app.use express.bodyParser()
