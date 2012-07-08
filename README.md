@@ -1,4 +1,4 @@
-### Node.js + Express 3 + SASS + CoffeeScript
+### Node.js + Express 3 + SASS + CoffeeScript + HAML.js
 
 - complile coffee
 - complile scss
@@ -21,9 +21,13 @@
 - git clone
 - cd ExpressOnSteroids
 - npm install
+
+### How to Start App
+
+**Start application watcher (1st terminal)**
+
 - ./node_modules/coffee-script/bin/cake dev
+
+**Start application (2nd terminal)**
+
 - node app.js
-
-**TODO**
-
-- hamljs

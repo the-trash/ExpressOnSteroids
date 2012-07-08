@@ -9,6 +9,7 @@
     "express": "3.0.0beta5",
     "jade": "*",
     "hamljs": "*",
+    "consolidate": "*",
     "coffee-script": "*",
     "the_time.js": "*",
     "uglify-js": "*"
