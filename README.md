@@ -31,3 +31,5 @@
 **Start application (2nd terminal)**
 
 - node app.js
+
+Put your **CoffeeScript** files to **src** folder. Coffee files will be compile and puts to folders of Express framework.
