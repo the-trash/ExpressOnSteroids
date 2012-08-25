@@ -1,4 +1,4 @@
-### Node.js + Express 3 + SASS + CoffeeScript + HAML.js
+### Node.js + Express 3 + SASS + CoffeeScript + Jade/HAML.js
 
 - complile coffee
 - complile scss
